@@ -1,0 +1,223 @@
+/* Reset e fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background-color: #2e4f50;
+    color: #fff;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #d1e7e5;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(rgba(58, 111, 120, 0.6), rgba(58, 111, 120, 0.6)),
+                url("img/banner.jpg") no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-overlay h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.hero-overlay p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+button {
+    background-color: #2e4f50;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #3a6f78;
+    transform: scale(1.05);
+}
+
+/* Cards */
+.ajuda-terapia {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.ajuda-terapia h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #2e4f50;
+}
+
+.ajuda-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 22%;
+    min-width: 220px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #2e4f50;
+}
+
+/* Seções alternadas */
+.approach-section, .transform-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.approach-text, .transform-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.approach-text h2, .transform-text h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #2e4f50;
+}
+
+.approach-image, .transform-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.approach-image img, .transform-image img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    max-height: 300px;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #3a6f78;
+    color: white;
+    padding: 30px 20px;
+}
+
+.rodape-conteudo {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.rodape-info {
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.rodape-social a {
+    margin-left: 15px;
+}
+
+.rodape-social img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s;
+}
+
+.rodape-social img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsivo */
+@media (max-width: 800px) {
+    .ajuda-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .approach-section, .transform-section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
